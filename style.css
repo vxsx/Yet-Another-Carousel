@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    height: 100%;
+}
+#github {
+    color: white;
+    right: -65px;
+    height: 30px;
+    top: 40px;
+    position: absolute;
+    text-decoration: none;
+    width: 250px;
+    opacity: 1;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#github span {
+    background: #000;
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+    padding: 5px 0;
+    opacity: 1;
+    -moz-transition: opacity linear 0.2s;
+    -webkit-transition: opacity linear 0.2s;
+    -o-transition: opacity linear 0.2s;
+    transition: opacity linear 0.2s;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all linear 0.2s;
+}
+#github span:last-child {
+    background: #65BDFB;
+    -webkit-transform: rotatex(180deg);
+    -moz-transform: rotatex(180deg);
+    opacity: 0;
+}
+#github:hover span:first-child {
+    opacity: 0;
+    -webkit-transform: rotatex(180deg);
+    -moz-transform: rotatex(180deg);
+}
+#github:hover span:last-child {
+    opacity: 1;
+    -webkit-transform: rotatex(360deg);
+    -moz-transform: rotatex(360deg);
+}
+
+.layout_columns_2 {
+    overflow: hidden;
+}
+    .layout_columns_2 .layout__column {
+        width: 50%;
+        float: left;
+    }
+
+
+/* HERE GOES RELEVANT STYLES */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 100px;
+    margin: 300px 0;
+    border: 1px solid black;
+}
+    .carousel__list {
+        white-space: nowrap;
+        overflow: hidden;
+        height: 100px;
+        width: 600px;
+    }
+        .carousel__item {
+            display: inline-block;
+            margin-right: 5px;
+			margin-left: 5px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background: #ccc;
+            font-size: 18px;
+            text-shadow: 1px 1px 0px rgba(255,255,255,.6);
+            vertical-align: middle;
+            text-align: center;
+        }
+        .carousel__item:first-child {
+            margin-left: 0px;
+        }
+        .carousel__item:last-child {
+            margin-right: 0px;
+        }
+    .carousel__control {
+        position: absolute;
+        outline: none;
+        background: #eee;
+        width: 20px;
+    }
+        .carousel__control_action_prev {
+            top:0; 
+            left: 0;
+			bottom: 0;
+        }
+        .carousel__control_action_next {
+			top: 0;
+            right: 0;
+            bottom: 0;
+        }
+		.carousel__control_state_disabled {
+			display: none;
+		}
+		.carousel__control_state_active {
+			background: #bfbfbf;
+		}
+
+    .carousel__control-inner {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        font: 0/0 a;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+		margin-left: -3px;
+		margin-top: -3px;
+    }
+        .carousel__control_action_prev .carousel__control-inner {
+            border-width: 5px 5px 5px 0px;
+            border-style: solid solid solid none;
+            border-color: transparent black transparent transparent;
+        }
+        .carousel__control_action_next .carousel__control-inner {
+            border-width: 5px  0px 5px 5px;
+            border-style: solid none solid solid;
+            border-color: transparent transparent transparent black;
+        }
+
+
+
+    .no-js .carousel__list {
+        overflow: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    .no-js .carousel__control_prev,
+    .no-js .carousel__control_next {
+        display: none;
+    }
+
+.carousel_orientation_vertical {
+	width: 100px;
+	height: 600px;
+    margin: 50px auto;
+}
+
+	.carousel_orientation_vertical .carousel__list {
+		width: 100px;
+		height: 600px;
+	}
+    .carousel_orientation_vertical .carousel__item {
+    	display: block;
+		margin-right: 0px;
+		margin-left: 0px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+    }
+    .carousel_orientation_vertical .carousel__item:first-child {
+        margin-top: 0px;
+    }
+    .carousel_orientation_vertical .carousel__item:last-child {
+        margin-bottom: 0px;
+    }
+	.carousel_orientation_vertical .carousel__control {
+		height: 20px;
+		width: auto;
+	}
+		.carousel_orientation_vertical .carousel__control_action_prev {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: auto;
+		}
+		.carousel_orientation_vertical .carousel__control_action_next {
+			top: auto;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+			.carousel_orientation_vertical .carousel__control_action_prev .carousel__control-inner {
+				border-width: 0px 5px 5px 5px;
+				border-style: none solid solid solid;
+				border-color: transparent transparent black transparent;
+			}
+			.carousel_orientation_vertical .carousel__control_action_next .carousel__control-inner {
+				border-width: 5px 5px 0px 5px;
+				border-style: solid solid none solid;
+				border-color: black transparent transparent transparent;
+			}
+    .no-js .carousel_orientation_vertical .carousel__list {
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }

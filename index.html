@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>Yet Another Carousel</title>
+    <script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+    <script src="jquery.carousel.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<a href="http://github.com/vxsx/yet-another-carousel" id="github"><span>Fork me on GitHub</span><span>Be nice!</span></a>
+<script type="text/javascript">
+
+
+
+//usage
+$(function() {
+    $('html').removeClass('no-js').addClass('js');
+
+       
+        $('#carousel .carousel__list').carousel({
+            orientation: 'vertical',
+            prev: '#carousel .carousel__control_action_prev',
+            next: '#carousel .carousel__control_action_next'
+        })
+        // .mousewheel(function(e, delta){
+        //     e.preventDefault();
+        //     this.scrollTop -= delta * 50;
+        //     this.triggerHandler('carousel-fix');
+        //     //for example
+        // });
+
+        $('#carousel-hor .carousel__list').carousel({
+            prev: '#carousel-hor .carousel__control_action_prev',
+            next: '#carousel-hor .carousel__control_action_next'
+        })
+})
+</script>
+
+<div class="layout layout_columns_2">
+    <div class="layout__column">
+        <!-- vertical carousel -->
+        <div id="carousel" class="carousel carousel_orientation_vertical">
+            <a href="#" class="carousel__control carousel__control_action_prev carousel__control_state_disabled"><span class="carousel__control-inner"></span></a>
+            <a href="#" class="carousel__control carousel__control_action_next carousel__control_state_disabled"><span class="carousel__control-inner"></span></a>
+            <ul class="carousel__list">
+                <li class="carousel__item">1</li>
+                <li class="carousel__item">2</li>
+                <li class="carousel__item">3</li>
+                <li class="carousel__item">4</li>
+                <li class="carousel__item">5</li>
+                <li class="carousel__item">6</li>
+                <li class="carousel__item">7</li>
+                <li class="carousel__item">8</li>
+                <li class="carousel__item">9</li>
+                <li class="carousel__item">10</li>
+                <li class="carousel__item">11</li>
+                <li class="carousel__item">12</li>
+                <li class="carousel__item">13</li>
+                <li class="carousel__item">14</li>
+                <li class="carousel__item">15</li>
+            </ul>
+        </div>
+    </div>
+        
+    <div class="layout__column">
+        <!-- horizontal carousel -->
+        <div id="carousel-hor" class="carousel">
+            <a href="#" class="carousel__control carousel__control_action_prev carousel__control_state_disabled"><span class="carousel__control-inner"></span></a>
+            <a href="#" class="carousel__control carousel__control_action_next carousel__control_state_disabled"><span class="carousel__control-inner"></span></a>
+            <ul class="carousel__list">
+                <li class="carousel__item">1</li>
+                <li class="carousel__item">2</li>
+                <li class="carousel__item">3</li>
+                <li class="carousel__item">4</li>
+                <li class="carousel__item">5</li>
+                <li class="carousel__item">6</li>
+                <li class="carousel__item">7</li>
+                <li class="carousel__item">8</li>
+                <li class="carousel__item">9</li>
+                <li class="carousel__item">10</li>
+                <li class="carousel__item">11</li>
+                <li class="carousel__item">12</li>
+                <li class="carousel__item">13</li>
+                <li class="carousel__item">14</li>
+                <li class="carousel__item">15</li>
+                <li class="carousel__item">11</li>
+                <li class="carousel__item">12</li>
+                <li class="carousel__item">13</li>
+                <li class="carousel__item">14</li>
+                <li class="carousel__item">15</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
