@@ -46,6 +46,10 @@ Required portion of CSS:<br>
     overflow: hidden;
     white-space: nowrap;
 }
+.no-js .carousel__list {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
 ```
 
 And that's it for required css actually, but I suggest you see a demo. Note that controls could be multiple and may be wherever you want.
