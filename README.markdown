@@ -52,7 +52,7 @@ Required portion of CSS:<br>
 }
 ```
 
-And that's it for required css actually, but I suggest you see a demo. Note that controls could be multiple and may be wherever you want.
+And that's it for required css actually, but I suggest you see a [demo](http://vxsx.github.com/Yet-Another-Carousel). Note that controls could be multiple and may be wherever you want.
 
 And Javascript:<br>
 
